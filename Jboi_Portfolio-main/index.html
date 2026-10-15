@@ -1,0 +1,612 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="paper">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>Limuel Brasona — The Curious Developer</title>
+    <meta name="description"
+        content="Limuel Brasona — 4th-year BSIT student and developer building web apps, mobile apps, and games. See projects, tech stack, and contact details.">
+    <meta property="og:title" content="Limuel Brasona — The Curious Developer">
+    <meta property="og:description"
+        content="Web apps, mobile apps, and games built with PHP, React Native, TypeScript, Supabase, and Godot.">
+    <meta property="og:type" content="website">
+    <meta name="theme-color" content="#F6F3EB">
+    <link rel="icon"
+        href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' fill='%23D0382B'/%3E%3Ctext x='50%25' y='56%25' text-anchor='middle' dominant-baseline='middle' font-family='sans-serif' font-weight='900' font-size='38' fill='%23fff'%3E%E5%A5%BD%3C/text%3E%3C/svg%3E">
+
+    <!-- Apply saved theme before paint (no flash) -->
+    <script>
+        (function () {
+            try {
+                var t = localStorage.getItem('curious_dev_theme');
+                if (!t) t = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'ink' : 'paper';
+                document.documentElement.setAttribute('data-theme', t);
+            } catch (e) { }
+            document.documentElement.classList.add('js');
+        })();
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Caveat:wght@700&family=JetBrains+Mono:wght@400;500;700&family=Plus+Jakarta+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@500;600;700&family=Syne:wght@700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <a class="skip-link" href="#projects">Skip to projects</a>
+
+    <!-- ================= MASTHEAD ================= -->
+    <header class="masthead" id="masthead">
+        <div class="container masthead-inner">
+            <a href="#top" class="brand">
+                <span class="brand-kanji" aria-hidden="true">好奇心</span>
+                <span class="brand-text">LIMUEL BRASONA<span class="gold-dot">.</span></span>
+            </a>
+
+            <nav aria-label="Main" class="main-nav" id="mainNav">
+                <ul class="nav-list">
+                    <li><a href="#stack" class="nav-link"><span class="nav-num">01.</span> Stack</a></li>
+                    <li><a href="#projects" class="nav-link"><span class="nav-num">02.</span> Projects</a></li>
+                    <li><a href="#about" class="nav-link"><span class="nav-num">03.</span> About</a></li>
+                    <li><a href="#contact" class="nav-link"><span class="nav-num">04.</span> Contact</a></li>
+                </ul>
+            </nav>
+
+            <div class="masthead-actions">
+                <button class="icon-btn" id="themeToggle" type="button" aria-label="Switch paper / ink theme">
+                    <span class="i-sun" aria-hidden="true">☼</span>
+                    <span class="i-moon" aria-hidden="true">☾</span>
+                </button>
+                <a href="#contact" class="btn btn-primary btn-sm">Hire me</a>
+                <button class="icon-btn menu-btn" id="menuToggle" type="button" aria-label="Open menu"
+                    aria-expanded="false" aria-controls="mainNav">
+                    <span class="menu-bars" aria-hidden="true"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main id="top">
+
+        <!-- ================= HERO ================= -->
+        <section class="hero">
+            <div class="container hero-grid">
+
+                <div class="hero-copy reveal">
+                    <div class="hero-eyebrow">
+                        <span class="stamp-seal">STUDY<br>&amp; BUILD</span>
+                        <span class="eyebrow-text">CHAPTER 00 // PORTRAIT OF A LEARNER</span>
+                    </div>
+
+                    <h1 class="hero-title">
+                        <span class="title-sub">LIMUEL BRASONA</span>
+                        <span class="title-main">THE CURIOUS DEVELOPER</span>
+                    </h1>
+
+                    <p class="hero-tagline">
+                        <span>WEB</span><span class="tag-divider">•</span><span>MOBILE</span><span
+                            class="tag-divider">•</span><span>GAME DEV</span>
+                    </p>
+
+                    <p class="hero-lead">
+                        4th-year BSIT student at Cebu Eastern College. I shipped a certificate management system,
+                        I'm building a habit-tracking mobile app, and I make games in Godot on the side.
+                    </p>
+
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">View my work <span aria-hidden="true">↓</span></a>
+                        <a href="mailto:limuelforwork@gmail.com" class="btn btn-secondary">Email me <span
+                                aria-hidden="true">→</span></a>
+                    </div>
+
+                    <div class="hero-meta">
+                        <span class="availability"><span class="led" aria-hidden="true"></span> Open to internships
+                            &amp; project work</span>
+                        <a href="https://github.com/lilzamdev" target="_blank" rel="noopener noreferrer"
+                            class="meta-link">GitHub ↗</a>
+                        <a href="https://www.linkedin.com/in/limuel-marcelino-brasona-81a838376/" target="_blank"
+                            rel="noopener noreferrer" class="meta-link">LinkedIn ↗</a>
+                    </div>
+                </div>
+
+                <div class="hero-portrait reveal">
+                    <div class="portrait-card">
+                        <span class="corner-gold top-l" aria-hidden="true"></span>
+                        <span class="corner-gold top-r" aria-hidden="true"></span>
+                        <span class="corner-gold btm-l" aria-hidden="true"></span>
+                        <span class="corner-gold btm-r" aria-hidden="true"></span>
+                        <div class="portrait-frame">
+                            <img src="assets/images/profile.jpg" alt="Portrait of Limuel Brasona" width="720"
+                                height="766" loading="eager">
+                            <div class="portrait-caption">
+                                <span>SUBJECT: LIMUEL BRASONA</span>
+                                <span class="caption-badge">STUDENT &amp; DEVELOPER</span>
+                            </div>
+                        </div>
+                        <div class="portrait-stamp" aria-hidden="true">
+                            <span class="stamp-char">学</span>
+                            <span class="stamp-sub">STUDY</span>
+                        </div>
+                    </div>
+                    <p class="handwritten-note" aria-hidden="true">
+                        <svg viewBox="0 0 90 50" class="note-arrow">
+                            <path d="M82,42 C50,42 26,26 12,12" fill="none" stroke="currentColor" stroke-width="2.2"
+                                stroke-linecap="round" />
+                            <polygon points="20,10 6,9 10,22" fill="currentColor" />
+                        </svg>
+                        Turning curiosity into real code.
+                    </p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- ================= 01 STACK ================= -->
+        <section class="chapter-section section-contrast" id="stack">
+            <div class="container">
+                <header class="chapter-header reveal">
+                    <div class="chapter-badge"><span class="chapter-num">CHAPTER 01</span><span
+                            class="chapter-kanji">道具箱</span></div>
+                    <h2 class="chapter-title">MY ARSENAL</h2>
+                    <p class="chapter-subtitle">Tools I've used in real projects.</p>
+                    <div class="gold-divider"></div>
+                </header>
+
+                <div class="arsenal-grid reveal">
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">01</span>
+                            <h3 class="cat-title">FRONTEND</h3><span class="cat-kanji">ウェブ</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/html5/html5-original.svg"
+                                    alt="" loading="lazy">HTML</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/css3/css3-original.svg"
+                                    alt="" loading="lazy">CSS</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/javascript/javascript-original.svg"
+                                    alt="" loading="lazy">JavaScript</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/typescript/typescript-original.svg"
+                                    alt="" loading="lazy">TypeScript</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">02</span>
+                            <h3 class="cat-title">MOBILE</h3><span class="cat-kanji">モバイル</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/react/react-original.svg"
+                                    alt="" loading="lazy">React Native</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/expo/expo-original.svg"
+                                    alt="" loading="lazy">Expo</li>
+                            <li class="tool-chip">AsyncStorage</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">03</span>
+                            <h3 class="cat-title">BACKEND &amp; DATA</h3><span class="cat-kanji">基盤</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/php/php-original.svg"
+                                    alt="" loading="lazy">PHP</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/mysql/mysql-original.svg"
+                                    alt="" loading="lazy">MySQL</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/supabase/supabase-original.svg"
+                                    alt="" loading="lazy">Supabase</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">04</span>
+                            <h3 class="cat-title">GAME DEV</h3><span class="cat-kanji">ゲーム</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/godot/godot-original.svg"
+                                    alt="" loading="lazy">Godot</li>
+                            <li class="tool-chip">GDScript</li>
+                            <li class="tool-chip">Pixel Art</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">05</span>
+                            <h3 class="cat-title">TOOLS</h3><span class="cat-kanji">道具</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/git/git-original.svg"
+                                    alt="" loading="lazy">Git &amp; GitHub</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/figma/figma-original.svg"
+                                    alt="" loading="lazy">Figma</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/vscode/vscode-original.svg"
+                                    alt="" loading="lazy">VS Code</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category">
+                        <div class="category-header"><span class="cat-num">06</span>
+                            <h3 class="cat-title">AI &amp; PROMPTING</h3><span class="cat-kanji">人工知能</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip">Prompt Engineering</li>
+                            <li class="tool-chip">AI-Assisted Development</li>
+                            <li class="tool-chip">Claude</li>
+                        </ul>
+                    </div>
+
+                    <div class="arsenal-category category-learning">
+                        <div class="category-header"><span class="cat-num">07</span>
+                            <h3 class="cat-title">ALSO LEARNING</h3><span class="cat-kanji">勉強中</span>
+                        </div>
+                        <ul class="tool-list">
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/python/python-original.svg"
+                                    alt="" loading="lazy">Python</li>
+                            <li class="tool-chip"><img
+                                    src="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.16.0/icons/csharp/csharp-original.svg"
+                                    alt="" loading="lazy">C#</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 02 PROJECTS ================= -->
+        <section class="chapter-section" id="projects">
+            <div class="container">
+                <header class="chapter-header reveal">
+                    <div class="chapter-badge"><span class="chapter-num">CHAPTER 02</span><span
+                            class="chapter-kanji">作品集</span></div>
+                    <h2 class="chapter-title">WHAT I BUILD</h2>
+                    <p class="chapter-subtitle">Selected projects — what they do, what I built, and the stack behind
+                        them.</p>
+                    <div class="gold-divider"></div>
+                </header>
+
+                <div class="projects">
+
+                    <!-- EasyCert -->
+                    <article class="project reveal">
+                        <a class="project-media" href="https://easy-cert.vercel.app/" target="_blank"
+                            rel="noopener noreferrer" aria-label="Open EasyCert live demo">
+                            <img src="assets/images/easycert-web.jpg"
+                                alt="EasyCert dashboard with certificate search, stats and verification analytics"
+                                width="1400" height="781" loading="lazy">
+                        </a>
+                        <div class="project-body">
+                            <div class="p-header-top">
+                                <span class="p-num">ENTRY 01 // WEB APP</span>
+                                <span class="p-status status-done">COMPLETED</span>
+                            </div>
+                            <h3 class="project-title">EASYCERT</h3>
+                            <p class="p-genre">CERTIFICATE MANAGEMENT &amp; VERIFICATION SYSTEM</p>
+                            <p class="p-quote">"I wanted to make certificate creation faster, easier, and more
+                                organized."</p>
+                            <ul class="project-points">
+                                <li>Certificate generation from participant records</li>
+                                <li>Certificate verification and organized records</li>
+                                <li>Dashboard UI designed in Figma first</li>
+                            </ul>
+                            <ul class="tech-tags" aria-label="Built with">
+                                <li>PHP</li>
+                                <li>MySQL</li>
+                                <li>JavaScript</li>
+                                <li>HTML/CSS</li>
+                                <li>Figma</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn-primary btn-sm" href="https://easy-cert.vercel.app/" target="_blank"
+                                    rel="noopener noreferrer">Live demo ↗</a>
+                                <a class="btn btn-secondary btn-sm" href="https://github.com/lilzamdev"
+                                    target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <button class="link-btn" type="button" data-details="d-easycert">Dev notes →</button>
+                            </div>
+                        </div>
+
+                        <template id="d-easycert">
+                            <h4>The goal</h4>
+                            <p>Make certificate creation faster, easier, and more organized for schools, organizations,
+                                and events.</p>
+                            <h4>What I built</h4>
+                            <p>A web-based certificate system with certificate management, participant information,
+                                certificate generation, organized records, and a streamlined creation workflow.</p>
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Keeping the workflow simple while still supporting different certificate
+                                    requirements.</li>
+                                <li>Managing certificate and participant data while keeping records organized.</li>
+                                <li>Designing an interface that makes generation quick and easy.</li>
+                            </ul>
+                            <h4>What I learned</h4>
+                            <p>A good system solves a real problem without making the process more complicated —
+                                usability and workflow design matter as much as the code.</p>
+                            <h4>Next</h4>
+                            <p>More templates and customization options, better performance, and an even faster
+                                generation flow.</p>
+                        </template>
+                    </article>
+
+                    <!-- Magbago Ka Na! -->
+                    <article class="project reveal">
+                        <div class="project-media">
+                            <img src="assets/images/magbagokana-web.jpg"
+                                alt="Two phones showing the Magbago Ka Na! daily dashboard and achievements screens"
+                                width="1024" height="572" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="p-header-top">
+                                <span class="p-num">ENTRY 02 // MOBILE APP</span>
+                                <span class="p-status status-wip">IN PROGRESS</span>
+                            </div>
+                            <h3 class="project-title">MAGBAGO KA NA!</h3>
+                            <p class="p-genre">PERSONAL PRODUCTIVITY &amp; HABIT APP</p>
+                            <p class="p-quote">"I wanted an app that helps people build better habits and stay
+                                consistent."</p>
+                            <ul class="project-points">
+                                <li>Habits &amp; streaks, tasks, reminders and alarms</li>
+                                <li>Money tracking, savings goals, progress &amp; achievements</li>
+                                <li>Works offline, syncs to Supabase when back online</li>
+                            </ul>
+                            <ul class="tech-tags" aria-label="Built with">
+                                <li>React Native</li>
+                                <li>Expo</li>
+                                <li>TypeScript</li>
+                                <li>Supabase</li>
+                                <li>AsyncStorage</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn-secondary btn-sm" href="https://github.com/lilzamdev"
+                                    target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <button class="link-btn" type="button" data-details="d-magbago">Dev notes →</button>
+                            </div>
+                        </div>
+
+                        <template id="d-magbago">
+                            <h4>The goal</h4>
+                            <p>A simple app that helps people organize their daily life, build good habits, manage
+                                money, and stay consistent with their goals.</p>
+                            <h4>What I built</h4>
+                            <p>Daily tasks, habits and streaks, reminders, alarms, money tracking, savings goals, food
+                                tracking, activity tracking, progress, and achievements.</p>
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Connecting many features while keeping the app simple to use.</li>
+                                <li>Making alarms and reminders reliable on mobile devices.</li>
+                                <li>Offline support, with data syncing when the internet comes back.</li>
+                            </ul>
+                            <h4>What I learned</h4>
+                            <p>A useful app isn't about adding features — it has to be simple, reliable, and easy to use
+                                every day.</p>
+                            <h4>Next</h4>
+                            <p>A more reliable alarm system, better performance and offline experience, and continued
+                                design polish.</p>
+                        </template>
+                    </article>
+
+                    <!-- Night Harvest -->
+                    <article class="project reveal">
+                        <div class="project-media">
+                            <img src="assets/images/nigh harvest.png"
+                                alt="Night Harvest pixel-art farm with crops, a farmhouse and a river" width="1152"
+                                height="636" loading="lazy">
+                        </div>
+                        <div class="project-body">
+                            <div class="p-header-top">
+                                <span class="p-num">ENTRY 03 // 2D GAME</span>
+                                <span class="p-status status-wip">IN DEVELOPMENT</span>
+                            </div>
+                            <h3 class="project-title">NIGHT HARVEST</h3>
+                            <p class="p-genre">2D TOP-DOWN FARMING &amp; SURVIVAL</p>
+                            <p class="p-quote">"I wanted to try making a game, so I learned Godot and built a
+                                farming-survival loop."</p>
+                            <ul class="project-points">
+                                <li>Tile-based farming with tilled, watered and planted soil states</li>
+                                <li>Day/night lighting cycle and crop growth timers</li>
+                                <li>Inventory system and state machines for game entities</li>
+                            </ul>
+                            <ul class="tech-tags" aria-label="Built with">
+                                <li>Godot</li>
+                                <li>GDScript</li>
+                                <li>2D Tilemaps</li>
+                                <li>Pixel Art</li>
+                            </ul>
+                            <div class="project-links">
+                                <a class="btn btn-secondary btn-sm" href="https://github.com/lilzamdev"
+                                    target="_blank" rel="noopener noreferrer">GitHub</a>
+                                <button class="link-btn" type="button" data-details="d-nightharvest">Dev notes
+                                    →</button>
+                            </div>
+                        </div>
+
+                        <template id="d-nightharvest">
+                            <h4>The goal</h4>
+                            <p>Farm by day, protect your harvest from zombies at night — a farming-survival loop built
+                                while learning Godot.</p>
+                            <h4>What I built</h4>
+                            <p>A playable prototype with tile-based farming, day/night lighting shifts, an inventory
+                                system, and crop growth mechanics.</p>
+                            <h4>Challenges</h4>
+                            <ul>
+                                <li>Getting Godot scene trees and nodes to communicate without tangled dependencies.
+                                </li>
+                                <li>Day/night ambient lighting and torch light radius.</li>
+                                <li>A custom tilemap grid with interactive soil states.</li>
+                            </ul>
+                            <h4>What I learned</h4>
+                            <p>When entities update every frame, simple and decoupled state logic makes debugging much
+                                easier.</p>
+                            <h4>Next</h4>
+                            <p>Cleaner item passing between nodes, more enemy variety, and seasonal weather.</p>
+                        </template>
+                    </article>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 03 ABOUT ================= -->
+        <section class="chapter-section section-contrast" id="about">
+            <div class="container">
+                <header class="chapter-header reveal">
+                    <div class="chapter-badge"><span class="chapter-num">CHAPTER 03</span><span
+                            class="chapter-kanji">自己紹介</span></div>
+                    <h2 class="chapter-title">WHO AM I?</h2>
+                    <p class="chapter-subtitle">A student and developer who learns best by building things.</p>
+                    <div class="gold-divider"></div>
+                </header>
+
+                <div class="editorial-grid reveal">
+                    <div class="editorial-panel">
+                        <div class="panel-tag">NARRATIVE // HOW I GOT STARTED</div>
+                        <h3 class="panel-heading">"I didn't start with a big master plan. I just asked:
+                            <span class="ink-highlight">How does this actually work?</span>"
+                        </h3>
+                        <p class="panel-text">
+                            Every project I've started began with curiosity about a mechanic or an idea. I open the
+                            editor, build a first version, break it, and figure out why. That loop taught me most of
+                            what I know — and it's how I pick up new tools quickly.
+                        </p>
+                        <div class="quote-box">
+                            <p>"Let's see what happens if I try."</p>
+                            <span>— Personal motto</span>
+                        </div>
+                    </div>
+
+                    <div class="side-panel">
+                        <div class="mindset-card">
+                            <span class="mindset-num">01</span>
+                            <div>
+                                <h4>Understand the basics</h4>
+                                <p>Frameworks change. Logic, rendering, and how data moves stay with you.</p>
+                            </div>
+                        </div>
+                        <div class="mindset-card">
+                            <span class="mindset-num">02</span>
+                            <div>
+                                <h4>Learn from broken code</h4>
+                                <p>Errors show me where my assumptions were wrong, so I can fix them.</p>
+                            </div>
+                        </div>
+                        <div class="mindset-card">
+                            <span class="mindset-num">03</span>
+                            <div>
+                                <h4>Care about the details</h4>
+                                <p>Clean layouts and smooth interactions make software feel great to use.</p>
+                            </div>
+                        </div>
+                        <div class="snapshot-box">
+                            <div class="snapshot-header"><span class="stamp-tiny">LOG</span> DEVELOPER PROFILE</div>
+                            <ul>
+                                <li><strong>Education:</strong> BSIT, 4th year — Cebu Eastern College</li>
+                                <li><strong>Focus:</strong> Web, mobile &amp; game development</li>
+                                <li><strong>Exploring next:</strong> Full-stack APIs, Godot mechanics, UI/UX</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ================= 04 CONTACT ================= -->
+        <section class="chapter-section" id="contact">
+            <div class="container">
+                <header class="chapter-header reveal">
+                    <div class="chapter-badge"><span class="chapter-num">CHAPTER 04</span><span
+                            class="chapter-kanji">連絡</span></div>
+                    <h2 class="chapter-title">LET'S CONNECT</h2>
+                    <p class="chapter-subtitle">Open to internships, project work, and collaboration.</p>
+                    <div class="gold-divider"></div>
+                </header>
+
+                <div class="contact-console reveal">
+                    <div class="console-header">
+                        <span class="console-title"><span class="led" aria-hidden="true"></span> GET IN TOUCH // OPEN
+                            TO CONNECT</span>
+                        <span class="console-status">STATUS: ONLINE</span>
+                    </div>
+
+                    <div class="console-grid">
+                        <div class="console-pitch">
+                            <h3 class="pitch-title">The fastest way to reach me is email.</h3>
+                            <div class="contact-actions">
+                                <a href="mailto:limuelforwork@gmail.com" class="btn btn-primary">✉ Email me</a>
+                                <button type="button" class="btn btn-secondary" id="copyEmail"
+                                    data-email="limuelforwork@gmail.com">Copy email</button>
+                            </div>
+                        </div>
+
+                        <dl class="contact-channels">
+                            <div class="channel-row">
+                                <dt>EMAIL:</dt>
+                                <dd><a href="mailto:limuelforwork@gmail.com">limuelforwork@gmail.com</a></dd>
+                            </div>
+                            <div class="channel-row">
+                                <dt>PHONE:</dt>
+                                <dd><a href="tel:+639603637669">0960 363 7669</a></dd>
+                            </div>
+                            <div class="channel-row">
+                                <dt>GITHUB:</dt>
+                                <dd><a href="https://github.com/lilzamdev" target="_blank"
+                                        rel="noopener noreferrer">lilzamdev</a></dd>
+                            </div>
+                            <div class="channel-row">
+                                <dt>LINKEDIN:</dt>
+                                <dd><a href="https://www.linkedin.com/in/limuel-marcelino-brasona-81a838376/"
+                                        target="_blank" rel="noopener noreferrer">limuel-marcelino-brasona</a></dd>
+                            </div>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="editorial-footer">
+        <div class="container footer-inner">
+            <div>
+                <span class="footer-kanji">好奇心と探求</span>
+                <p class="footer-quote">"Always learning. Always building."</p>
+            </div>
+            <div class="footer-right">
+                <a href="#top" class="btn btn-secondary btn-sm">↑ Back to top</a>
+                <span class="footer-copy">© 2026 LIMUEL BRASONA // THE CURIOUS DEVELOPER</span>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Dev notes dialog -->
+    <dialog class="modal" id="modal" aria-labelledby="modalTitle">
+        <div class="modal-inner">
+            <div class="modal-head">
+                <div>
+                    <span class="p-num">DEV NOTES</span>
+                    <h3 id="modalTitle"></h3>
+                </div>
+                <button type="button" class="modal-close" id="modalClose" aria-label="Close">✕ CLOSE</button>
+            </div>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </dialog>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
