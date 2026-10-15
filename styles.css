@@ -184,7 +184,12 @@ ul, dl, dd { margin: 0; padding: 0; list-style: none; }
 .title-sub { font: 700 15px var(--font-mono); letter-spacing: .22em; color: var(--gold-text); }
 .title-main {
   font-family: var(--font-display); font-weight: 800; text-transform: uppercase;
-  font-size: clamp(38px, 6vw, 72px); line-height: .98; letter-spacing: -.03em;
+  font-size: clamp(26px, 6vw, 72px); line-height: .98; letter-spacing: -.03em;
+}
+/* Size the title to its own column so "DEVELOPER" (~10.3em wide) never overflows */
+@supports (container-type: inline-size) {
+  .hero-copy { container-type: inline-size; }
+  .title-main { font-size: clamp(22px, 9.4cqi, 72px); }
 }
 .hero-tagline {
   display: flex; flex-wrap: wrap; align-items: center; gap: 12px; margin-top: 18px;
@@ -555,7 +560,6 @@ ul, dl, dd { margin: 0; padding: 0; list-style: none; }
   .brand-kanji { display: none; }
   .brand-text { font-size: 13px; }
   .stamp-seal { display: none; }
-  .title-main { font-size: clamp(24px, 8.4vw, 34px); }
   .title-sub { font-size: 13px; letter-spacing: .14em; }
   .eyebrow-text { letter-spacing: .06em; }
   .hero-portrait { max-width: 190px; }
