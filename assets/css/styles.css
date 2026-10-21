@@ -318,6 +318,14 @@ ul, dl, dd { margin: 0; padding: 0; list-style: none; }
 .status-wip { color: var(--vermillion); }
 .project-title { font-family: var(--font-display); font-weight: 800; font-size: 30px; letter-spacing: -.01em; }
 .p-genre { margin-top: 4px; font: 500 11.5px var(--font-mono); letter-spacing: .08em; color: var(--ink-muted); }
+.p-role {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px; margin-top: 10px;
+  font: 700 11.5px var(--font-mono); letter-spacing: .08em; color: var(--ink-secondary);
+}
+.p-team {
+  padding: 2px 7px; border: 1.5px solid var(--gold); color: var(--gold-text);
+  font-size: 10.5px; letter-spacing: .06em;
+}
 .p-quote {
   margin-top: 14px; padding-left: 10px; border-left: 2px solid var(--gold);
   font: 700 20px/1.2 var(--font-hand); color: var(--ink-secondary);
@@ -423,6 +431,7 @@ ul, dl, dd { margin: 0; padding: 0; list-style: none; }
 .modal-body { padding: 6px 24px 28px; overflow-y: auto; }
 .modal-body h4 { font: 700 11.5px var(--font-mono); letter-spacing: .12em; text-transform: uppercase; color: var(--gold-text); margin: 22px 0 6px; }
 .modal-body p, .modal-body li { color: var(--ink-secondary); font-size: 15.5px; }
+.modal-body a { color: var(--gold-text); text-decoration: underline; text-underline-offset: 2px; }
 .modal-body ul { display: grid; gap: 6px; padding-left: 18px; list-style: square; }
 
 /* ---------- Toast ---------- */
